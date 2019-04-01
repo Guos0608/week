@@ -1,0 +1,69 @@
+@import "common.scss";
+$browser-default-font-size: 37.5px !default;
+@function pxTorem($px) {
+    //$px为需要转换的字号
+    @return $px / $browser-default-font-size * 1rem;
+}
+
+html,
+body {
+    font-size: 14px;
+}
+
+.warp {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    .head {
+        height: 20%;
+        width: 100%;
+        background: pink;
+    }
+    .content {
+        flex: 1;
+        overflow-x: hidden;
+        .title {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-direction: row;
+            margin-top: 15px;
+            p {
+                margin-left: 10px;
+                font-weight: bold;
+                &:hover {
+                    border-bottom: 3px solid pink;
+                    color: pink;
+                }
+            }
+        }
+        .section {
+            width: 100%;
+            height: 90%;
+            .big {
+                width: 80%;
+                height: 140px;
+                border: 1px solid #ccc;
+                overflow: hidden;
+                margin-left: 10%;
+                margin-top: 20px;
+                .img {
+                    width: 100%;
+                    height: 100px;
+                    background: red;
+                }
+                span {
+                    display: inline-block;
+                    margin-top: 10px;
+                    margin-left: 20%;
+                }
+            }
+        }
+    }
+    .foot {
+        height: 10%;
+        width: 100%;
+        background: pink;
+    }
+}
